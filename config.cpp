@@ -1,3 +1,4 @@
+/*
 class CfgPatches {
 	class grad_telephone_ui {
 		units[] = {};
@@ -11,5 +12,5 @@ class CfgPatches {
 
 #include "CfgFunctions.hpp"
 
-#include "defines.hpp"
 #include "ui.hpp"
+*/
