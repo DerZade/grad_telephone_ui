@@ -1,6 +1,6 @@
 /*
 class CfgPatches {
-	class grad_telephone_ui {
+	class GRAD_Nokia3310 {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;

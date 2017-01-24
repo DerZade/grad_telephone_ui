@@ -1,16 +1,17 @@
-class grad_telephone_ui
+class GRAD_Nokia3310
 {
-	tag = "grad_telephone_ui";
+	tag = "GRAD_Nokia3310";
 	class misc
 	{
-		file = "grad_telephone_ui\functions";
+		file = "GRAD_Nokia3310\functions";
+		class initPage {};
 		class onButtonClick {};
 		class onButtonClick_callIncoming {};
 		class onButtonClick_callNumber {};
 		class onButtonClick_callOutgoing {};
 		class onButtonClick_contact_menu {};
 		class onButtonClick_contacts {};
-		class onButtonClick_main {};
+		class onButtonClick_home {};
 		class onButtonClick_mainMenu {};
 		class onButtonClick_newContact {};
 		class onButtonClick_settings {};

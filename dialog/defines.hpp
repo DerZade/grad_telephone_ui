@@ -34,7 +34,6 @@ class RscEditLCD
 	size = "0.2 * (0.7 / (getResolution select 5))";
 	style = "0x00 + 0x40 + 0x200";
      font = "PuristaMedium";
-//	font = "tf_font_segments";
 	shadow = 1;
 	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2) * (0.7 / (getResolution select 5))";
 };
@@ -46,7 +45,7 @@ class HiddenButton
 	text = "";
 	colorText[] = {0, 0, 0, 1};
 	colorDisabled[] = {0, 0, 0, 0};
-	colorBackground[]={0,1,0,0.5};	
+	colorBackground[]={0,1,0,0.5};
 	colorBackgroundDisabled[] = {0, 0, 0, 0};
 	colorBackgroundActive[] = {0, 0, 0, 0};
 	colorFocused[] = {0, 0, 0, 0};
@@ -141,6 +140,7 @@ class RscEdit
      x = 0;
      y = 0;
 };
+*/
 class RscText
 {
      access = 0;
@@ -166,4 +166,86 @@ class RscText
      x = 0;
      y = 0;
 };
-*/
+class GRAD_Nokia3310_RscText : RscText
+{
+	shadow = 0;
+	colorText[] = {0,0,0,0.75};
+};
+class RscPictureKeepAspect
+{
+	access = 0;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	deletable = 0;
+	fade = 0;
+	fixedWidth = 0;
+	font = "TahomaB";
+	h = 0.15;
+	idc = -1;
+	lineSpacing = 0;
+	shadow = 0;
+	sizeEx = 0;
+	style = "0x30 + 0x800";
+	text = "";
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	tooltipColorText[] = {1,1,1,1};
+	type = 0;
+	w = 0.2;
+	x = 0;
+	y = 0;
+};
+class GRAD_Nokia3310_RscPictureKeepAspect: RscPictureKeepAspect
+{
+	colorText[]={1,1,1,0.75};
+};
+class RscControlsGroupNoScrollbars
+{
+     deletable = 0;
+     fade = 0;
+     h = 1;
+     idc = -1;
+     shadow = 0;
+     style = 16;
+     type = 15;
+     w = 1;
+     x = 0;
+     y = 0;
+     class HScrollbar
+     {
+          arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+          arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+          autoScrollDelay = 5;
+          autoScrollEnabled = 0;
+          autoScrollRewind = 0;
+          autoScrollSpeed = -1;
+          border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+          color[] = {1,1,1,1};
+          colorActive[] = {1,1,1,1};
+          colorDisabled[] = {1,1,1,0.3};
+          height = 0;
+          scrollSpeed = 0.06;
+          shadow = 0;
+          thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+          width = 0;
+     };
+     class VScrollbar
+     {
+          arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+          arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+          autoScrollDelay = 5;
+          autoScrollEnabled = 1;
+          autoScrollRewind = 0;
+          autoScrollSpeed = -1;
+          border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+          color[] = {1,1,1,1};
+          colorActive[] = {1,1,1,1};
+          colorDisabled[] = {1,1,1,0.3};
+          height = 0;
+          scrollSpeed = 0.06;
+          shadow = 0;
+          thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+          width = 0;
+     };
+     class Controls {};
+};

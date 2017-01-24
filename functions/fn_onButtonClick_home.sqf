@@ -1,10 +1,8 @@
 params ["_button","_display","_ctrlGrp"];
 
 switch (tolower _button) do {
-     case "select";
-     case "down";
-     case "up": {
-          [_display,"mainmenu"] call grad_telephone_ui_fnc_initPage;
+     case "select": {
+          [_display,"mainmenu"] call GRAD_Nokia3310_fnc_initPage;
      };
      case "1";
      case "2";
@@ -17,7 +15,7 @@ switch (tolower _button) do {
      case "8";
      case "9";
      case "0": {
-          [_display,"callnumber"] call grad_telephone_ui_fnc_initPage;
+          [_display,"callnumber"] call GRAD_Nokia3310_fnc_initPage;
           (_display displayCtrl MISSING) ctrlSetText _button;
      };
 };
