@@ -133,38 +133,29 @@ class RscText
      y = 0;
 };
 
-class HiddenButton
+class RscPicture
 {
-	idc = -1;
 	access = 0;
-	type = 1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	deletable = 0;
+	fade = 0;
+	fixedWidth = 0;
+	font = "TahomaB";
+	h = 0.15;
+	idc = -1;
+	lineSpacing = 0;
+	shadow = 0;
+	sizeEx = 0;
+	style = 48;
 	text = "";
-	colorText[] = {0, 0, 0, 1};
-	colorDisabled[] = {0, 0, 0, 0};
-	colorBackground[]={0,1,0,0.5};
-	colorBackgroundDisabled[] = {0, 0, 0, 0};
-	colorBackgroundActive[] = {0, 0, 0, 0};
-	colorFocused[] = {0, 0, 0, 0};
-	colorShadow[] = {0, 0, 0, 0};
-	colorBorder[] = {0, 0, 0, 0};
-
-	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
-	soundPush[] = {"\task_force_radio\sounds\softPush",0.5,1};
-	soundClick[] = {"\task_force_radio\sounds\softClick",0.5,1};
-	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
-	style = 2;
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	tooltipColorText[] = {1,1,1,1};
+	type = 0;
+	w = 0.2;
 	x = 0;
-	y = 0;
-	w = 0.095589;
-	h = 0.039216;
-	shadow = 2;
-	font = "PuristaMedium";
-	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	offsetX = 0.003;
-	offsetY = 0.003;
-	offsetPressedX = 0.002;
-	offsetPressedY = 0.002;
-	borderSize = 0;
+	y = 0;	
 };
 
 class GRAD_Nokia3310_RscText : RscText
