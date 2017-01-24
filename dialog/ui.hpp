@@ -7,7 +7,7 @@ class GRAD_Nokia3310_dialog
 	onUnload = "";
 	onLoad = "_this call GRAD_Nokia3310_fnc_onLoad;";
 	class controlsBackground {
-		class background: RscBackPicture
+		class background: RscPicture
 		{
 			idc = 1;
 			text = "GRAD_Nokia3310\data\dialog\background.paa";
@@ -87,7 +87,7 @@ class GRAD_Nokia3310_dialog
 			style = 2;
 			text = "Select";
 		};
-		class enter: HiddenButton
+		class enter: GRAD_Nokia3310_HiddenButton
 		{
 			x = 0.348 * NOKIA_W + safezoneX;
 			y = 0.524 * NOKIA_H + safezoneY;
@@ -95,7 +95,7 @@ class GRAD_Nokia3310_dialog
 			h = 0.046 * NOKIA_H;
 			onButtonClick = "['select',_this] call GRAD_Nokia3310_fnc_onButtonClick;";
 		};
-		class clear: HiddenButton
+		class clear: GRAD_Nokia3310_HiddenButton
 		{
 			x = 0.224 * NOKIA_W + safezoneX;
 			y = 0.547 * NOKIA_H + safezoneY;
@@ -103,7 +103,7 @@ class GRAD_Nokia3310_dialog
 			h = 0.071 * NOKIA_H;
 			onButtonClick = "['cancel',_this] call GRAD_Nokia3310_fnc_onButtonClick;";
 		};
-		class select_up: HiddenButton
+		class select_up: GRAD_Nokia3310_HiddenButton
 		{
 			x = 0.692 * NOKIA_W + safezoneX;
 			y = 0.542 * NOKIA_H + safezoneY;
@@ -111,7 +111,7 @@ class GRAD_Nokia3310_dialog
 			h = 0.072 * NOKIA_H;
 			onButtonClick = "['up',_this] call GRAD_Nokia3310_fnc_onButtonClick;";
 		};
-		class select_down: HiddenButton
+		class select_down: GRAD_Nokia3310_HiddenButton
 		{
 			x = 0.560 * NOKIA_W + safezoneX;
 			y = 0.574 * NOKIA_H + safezoneY;
@@ -119,7 +119,7 @@ class GRAD_Nokia3310_dialog
 			h = 0.072 * NOKIA_H;
 			onButtonClick = "['down',_this] call GRAD_Nokia3310_fnc_onButtonClick;";
 		};
-		class button_1: HiddenButton
+		class button_1: GRAD_Nokia3310_HiddenButton
 	     {
 			x = 0.194 * NOKIA_W + safezoneX;
 			y = 0.646 * NOKIA_H + safezoneY;
