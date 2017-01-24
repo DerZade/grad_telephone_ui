@@ -24,8 +24,7 @@ switch (toLower _newPage) do {
 
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "Menu";
 
-          (_display displayCtrl IDC_HOME_CARRIER) ctrlSetText "GRAD_Nokia3310\data\dialog\home\carrier_2_ca.paa";
-          (_display displayCtrl IDC_HOME_BACKGROUND) ctrlSetText "";
+          (_display displayCtrl IDC_HOME_CARRIER) ctrlSetText "GRAD_Nokia3310\data\dialog\home\carrier_5_ca.paa";
           (_display displayCtrl IDC_HOME_BATTERY) ctrlSetText "GRAD_Nokia3310\data\dialog\home\battery_full_ca.paa";
      };
      case "mainmenu": {
