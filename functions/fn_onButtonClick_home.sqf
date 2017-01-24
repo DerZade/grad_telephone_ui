@@ -15,7 +15,6 @@ switch (tolower _button) do {
      case "8";
      case "9";
      case "0": {
-          [_display,"callnumber"] call GRAD_Nokia3310_fnc_initPage;
-          (_display displayCtrl MISSING) ctrlSetText _button;
+
      };
 };

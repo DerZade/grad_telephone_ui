@@ -4,26 +4,6 @@ _params params ["_ctrl"];
 private _display = ctrlParent _ctrl;
 
 switch (toLower GRAD_Nokia3310_curPage) do {
-     case "callIncoming": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_callIncoming;
-     };
-     case "callnumber": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_callNumber;
-     };
-     case "callOutgoing": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_callOutgoing;
-     };
-     case "contact_menu": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_contact_menu;
-     };
-     case "contacts": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_contacts;
-     };
      case "home": {
           private _ctrlGroup = _display displayCtrl IDC_CTRLGROUP_HOME;
           [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_home;
@@ -31,13 +11,5 @@ switch (toLower GRAD_Nokia3310_curPage) do {
      case "mainmenu": {
           private _ctrlGroup = _display displayCtrl IDC_CTRLGROUP_MAINMENU;
           [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_mainMenu;
-     };
-     case "newcontact": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_newContact;
-     };
-     case "settings": {
-          private _ctrlGroup = _display displayCtrl MISSING;
-          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_settings;
      };
 };
