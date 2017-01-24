@@ -1,7 +1,7 @@
 #include "..\macros_idc.hpp"
 params ["_button","_display","_ctrlGrp"];
 
-_pages = [["Phone book","phonebook_ca.paa"], ["Call register","callregister_ca.paa"], ["Tones","tones_ca.paa"], ["Settings","settings_ca.paa"], ["Games","games_ca.paa"], ["Alarm clock","clock_ca.paa"], ["Profiles","profiles_ca.paa"]];
+private _pages = [["Phone book","phonebook_ca.paa"], ["Call register","callregister_ca.paa"], ["Tones","tones_ca.paa","tones"], ["Settings","settings_ca.paa"], ["Games","games_ca.paa"], ["Alarm clock","clock_ca.paa"], ["Profiles","profiles_ca.paa"]];
 
 private _curIndex = parseNumber ctrlText (_display displayCtrl IDC_HISTORY) -1;
 
@@ -10,7 +10,7 @@ switch (tolower _button) do {
           [_display,"home"] call GRAD_Nokia3310_fnc_initPage;
      };
      case "select": {
-
+          [_display,((_pages select _curIndex) select 2)] call GRAD_Nokia3310_fnc_initPage;
      };
      case "up";
      case "down": {

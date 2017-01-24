@@ -92,7 +92,7 @@ class RscText
      deletable = 0;
      fade = 0;
      fixedWidth = 0;
-     font = "RobotoCondensed";
+     font = "RobotoCondensedBold";
      h = 0.037;
      idc = -1;
      linespacing = 1;
@@ -108,7 +108,23 @@ class RscText
      x = 0;
      y = 0;
 };
-
+class RscStructuredText
+{
+     access = 0;
+     colorText[] = {1,1,1,1};
+     deletable = 0;
+     fade = 0;
+     h = 0.035;
+     idc = -1;
+     shadow = 1;
+     size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+     style = 0;
+     text = "";
+     type = 13;
+     w = 0.1;
+     x = 0;
+     y = 0;
+};
 class RscPicture
 {
 	access = 0;
@@ -135,6 +151,11 @@ class RscPicture
 };
 
 class GRAD_Nokia3310_RscText : RscText
+{
+	shadow = 0;
+	colorText[] = {0,0,0,0.75};
+};
+class GRAD_Nokia3310_RscStructuredText : RscStructuredText
 {
 	shadow = 0;
 	colorText[] = {0,0,0,0.75};

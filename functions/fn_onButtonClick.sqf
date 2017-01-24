@@ -12,4 +12,8 @@ switch (toLower GRAD_Nokia3310_curPage) do {
           private _ctrlGroup = _display displayCtrl IDC_CTRLGROUP_MAINMENU;
           [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_mainMenu;
      };
+     case "tones": {
+          private _ctrlGroup = _display displayCtrl IDC_CTRLGROUP_TONES;
+          [_button, _display, _ctrlGroup] call GRAD_Nokia3310_fnc_onButtonClick_tones;
+     };
 };

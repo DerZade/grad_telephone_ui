@@ -8,6 +8,7 @@ class GRAD_Nokia3310
 		class onButtonClick {};
 		class onButtonClick_home {};
 		class onButtonClick_mainMenu {};
+		class onButtonClick_tones {};
 		class onLoad {};
 		class onUnLoad {};
 	};
