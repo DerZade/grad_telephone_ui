@@ -53,14 +53,14 @@ class GRAD_Nokia3310_dialog
 					sizeEx = 0.03798 * NOKIA_H;
 					style = 1;
 				};
-				class background : GRAD_Nokia3310_RscPicture
+				class background : GRAD_Nokia3310_RscPictureKeepAspect
 				{
 					idc = IDC_HOME_BACKGROUND;
-					x = 0.07 * NOKIA_W;
+					x = 0.08 * NOKIA_W;
 					y = 0.03798 * NOKIA_H;
-					w = SCREEN_W - 0.14 * NOKIA_W;
+					w = SCREEN_W - 0.16 * NOKIA_W;
 					h = SCREEN_H;
-					text = "GRAD_Nokia3310\data\dialog\mainmenu\phonebook_ca.paa";
+					text = "GRAD_Nokia3310\data\dialog\backgrounds\nokia.paa";
 				};
 			};
 		};
