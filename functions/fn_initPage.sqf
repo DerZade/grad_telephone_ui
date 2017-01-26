@@ -45,14 +45,18 @@ switch (toLower _newPage) do {
           private _index = if (_history isEqualTo []) then {0} else {(_history select 0) - 1};
           (_display displayCtrl IDC_HISTORY) ctrlSetText str (_index + 1);
           (_display displayCtrl IDC_MAINMENU_TEXT) ctrlSetText ((_pages select _index) select 0);
-          (_display displayCtrl IDC_MAINMENU_PICTURE) ctrlSetText format ["GRAD_Nokia3310\data\dialog\mainmenu\%1",(_pages select _index) select 1];;
+          (_display displayCtrl IDC_MAINMENU_PICTURE) ctrlSetText format ["GRAD_Nokia3310\data\dialog\mainmenu\%1",(_pages select _index) select 1];
      };
      case "tones": {
+          private _pages = [["Ringing \ntone","Mozart 40"], ["Alarm \ntone","Test123"]];
+
           (_display displayCtrl IDC_CTRLGROUP_TONES) ctrlShow true;
 
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "Select";
 
-          (_display displayCtrl IDC_HISTORY) ctrlSetText "3";
-
+          private _index = if (count _history isEqualTo 1) then {0} else {(_history select 1) - 1};
+          (_display displayCtrl IDC_HISTORY) ctrlSetText format ["3-%1", _index + 1];
+          (_display displayCtrl IDC_TONES_SETTING) ctrlSetText ((_pages select _index) select 0);
+          (_display displayCtrl IDC_TONES_VALUE) ctrlSetText ((_pages select _index) select 1);
      };
 };
