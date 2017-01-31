@@ -21,3 +21,12 @@ class value: GRAD_Nokia3310_RscText
      style = 1;
      sizeEx = 0.03798 * NOKIA_H;
 };
+class list: GRAD_Nokia3310_RscListBox
+{
+     idc = IDC_TONES_LIST;
+     x = SCREEN_W * 0.03;
+     y = 0;
+     w = SCREEN_W * 0.94;
+     h = SCREEN_H;
+     sizeEx = SCREEN_H / 4;
+};

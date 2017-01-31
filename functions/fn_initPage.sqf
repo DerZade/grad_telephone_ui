@@ -26,6 +26,7 @@ switch (toLower _newPage) do {
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "";
 
           (_display displayCtrl IDC_CTRLGROUP_HOME) ctrlShow true;
+          (_display displayCtrl IDC_CTRLGROUP_HOME) ctrlEnable false;
 
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "Menu";
 
@@ -34,6 +35,7 @@ switch (toLower _newPage) do {
      };
      case "mainmenu": {
           (_display displayCtrl IDC_CTRLGROUP_MAINMENU) ctrlShow true;
+          (_display displayCtrl IDC_CTRLGROUP_MAINMENU) ctrlEnable false;
 
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "Select";
 
@@ -42,13 +44,17 @@ switch (toLower _newPage) do {
           [_display,_index] call GRAD_Nokia3310_fnc_scroll_mainmenu;
      };
      case "tones": {
-          private _pages = [["Ringing \ntone","Mozart 40"], ["Alarm \ntone","Test123"]];
 
           (_display displayCtrl IDC_CTRLGROUP_TONES) ctrlShow true;
 
+          (_display displayCtrl IDC_TONES_LIST) ctrlShow false;
+
           (_display displayCtrl IDC_ENTERTEXT) ctrlSetText "Select";
 
+
           private _index = if (count _history isEqualTo 1) then {0} else {(_history select 1) - 1};
+
+          (_display displayCtrl IDC_CTRLGROUP_TONES) ctrlEnable false;
 
           [_display, _Index] call GRAD_Nokia3310_fnc_scroll_tones;
      };
