@@ -1,4 +1,5 @@
-params ["_button","_display","_ctrlGrp"];
+#include "..\macros_idc.hpp"
+params ["_button","_display"];
 
 switch (tolower _button) do {
      case "select": {
