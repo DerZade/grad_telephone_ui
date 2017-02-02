@@ -1,7 +1,7 @@
 class setting: GRAD_Nokia3310_RscText
 {
      idc = IDC_TONES_SETTING;
-     text = "Ringing \ntone";
+     text = "";
      x = 0.05 * NOKIA_W;
      y = 0;
      w = SCREEN_W / 2;
@@ -16,7 +16,7 @@ class value: GRAD_Nokia3310_RscText
      y = 0.04697 * NOKIA_H;
      w = SCREEN_W - 0.05 * NOKIA_W;
      h = 0.09605 * NOKIA_H;
-     text = "Mozart 40";
+     text = "";
      font = "RobotoCondensedLight";
      style = 1;
      sizeEx = 0.03798 * NOKIA_H;

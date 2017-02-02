@@ -5,8 +5,6 @@ private _lb = _display displayCtrl IDC_TONES_LIST;
 
 private _history = [_display] call GRAD_Nokia3310_fnc_history;
 
-hint str (lbSize _lb);
-
 switch (tolower _button) do {
      case "cancel": {
           _lb ctrlShow false;

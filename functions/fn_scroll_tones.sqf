@@ -1,8 +1,8 @@
 #include "..\macros_idc.hpp"
 params ["_display","_index"];
 
-private _pages = [  ["Ringing \ntone","Mozart 40","tones_ringing"],
-                    ["Alarm \ntone","Test123","tones_alarm"]
+private _pages = [  ["Ringing \ntone","Attraction","tones_ringing"],
+                    ["Alarm \ntone","Tick Tick","tones_alarm"]
 ];
 
 if (_index isEqualTo count _pages) then {_index = 0;};
