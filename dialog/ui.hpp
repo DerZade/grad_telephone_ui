@@ -53,6 +53,22 @@ class GRAD_Nokia3310_dialog
 				#include "partials\tones.hpp"
 			};
 		};
+		class phonebook: tones
+		{
+			idc = IDC_CTRLGROUP_PHONEBOOK;
+			class controls
+			{
+				#include "partials\phonebook.hpp"
+			};
+		};
+		class alarm: tones
+		{
+			idc = IDC_CTRLGROUP_ALARM;
+			class controls
+			{
+				#include "partials\alarm.hpp"
+			};
+		};
 		class history: GRAD_Nokia3310_RscText
 		{
 			idc = IDC_HISTORY;

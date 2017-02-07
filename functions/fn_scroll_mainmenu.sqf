@@ -6,7 +6,7 @@ private _pages = [  ["Phone book","phonebook"],
                     ["Tones","tones"],
                     ["Settings","settings"],
                     ["Games","games"],
-                    ["Alarm clock","clock"],
+                    ["Alarm clock","alarm"],
                     ["Profiles","profiles"]
 ];
 
