@@ -99,14 +99,21 @@ switch (toLower _newPage) do {
           handle1 = [_display,IDC_ALARM_SET_EDIT] spawn {
                disableSerialization;
                params ["_disp","_idc"];
+               private _shownCursor = false;
                while {true} do {
                     private _text = toArray (ctrlText (_disp displayCtrl _idc));
-                    if (_text select (count _text -1) isEqualTo 124) then {
-                         _text deleteAt (count _text -1);
+                    if (_shownCursor) then {_text deleteAt (count _text -1);};
+                    private _char = _text deleteAt (count _text -1);
+                    _char = if (isNil "_char") then {""} else {toString [_char]};
+                    _text = toString _text;
+                    systemChat str [_text,_char,_shownCursor];
+                    if (_shownCursor) then {
+                         _text = format ["<t color='#00ffffff'>%1<t size='0.7'>%2</t></t>",_text,_char];
                     } else {
-                         _text pushBack 124;
+                         _text = format ["<t color='#00ffffff'>%1<t size='0.7'>%2</t></t><t color='#BF000000'>|</t>",_text,_char];
                     };
-                    (_disp displayCtrl _idc) ctrlSetText toString _text;
+                    (_disp displayCtrl _idc) ctrlSetStructuredText parseText _text;
+                    _shownCursor = !_shownCursor;
                     sleep 0.5;
                };
           };

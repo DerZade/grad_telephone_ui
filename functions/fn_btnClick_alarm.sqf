@@ -16,7 +16,7 @@ switch (tolower _button) do {
           if (_text select ((count _text) -1) isEqualTo 124) then {_text deleteAt ((count _text) -1);};
 
           _text deleteAt ((count _text) -1);
-          _editCtrl ctrlSetText (toString _text);
+          _editCtrl ctrlSetStructuredText parseText format ["<t color='#ffff00' size='%1'>%2</t>",0.03798 * NOKIA_H,toString _text];
      };
      case "up": {
           private _editCtrl = _display displayCtrl IDC_ALARM_SET_EDIT;
@@ -29,7 +29,7 @@ switch (tolower _button) do {
 
           _text pushBack _char;
 
-          _editCtrl ctrlSetText (toString _text);
+          _editCtrl ctrlSetStructuredText parseText (toString _text);
 
      };
 };
