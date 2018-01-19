@@ -25,4 +25,7 @@ switch (tolower _button) do {
 
           (_display displayCtrl IDC_HISTORY) ctrlSetText format ["3-%1-%2",(_history select 1), _nextIndex + 1];
      };
+     case "select": {
+          diag_log format ["lbData is %1", _lb];
+     };
 };

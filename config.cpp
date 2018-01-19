@@ -10,5 +10,6 @@ class CfgPatches {
 };
 
 #include "CfgFunctions.hpp"
+#include "CfgSounds.hpp"
 
 #include "dialog\ui.hpp"
