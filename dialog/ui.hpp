@@ -1,11 +1,12 @@
 #include "..\macros_idc.hpp"
+#include "defines.hpp"
 
 class GRAD_Nokia3310_dialog
 {
 	idd = -1;
 	movingEnable = 1;
 	onUnload = "";
-	onLoad = "_this call GRAD_Nokia3310_fnc_onLoad;";
+	onLoad = "_this call GRAD_Nokia3310_fnc_onLoad; diag_log format ['NOKIA 3310: %1', _this];";
 	class controlsBackground {
 		class background: RscPicture
 		{

@@ -1,4 +1,3 @@
-/*
 class CfgPatches {
 	class GRAD_Nokia3310 {
 		units[] = {};
@@ -12,5 +11,4 @@ class CfgPatches {
 
 #include "CfgFunctions.hpp"
 
-#include "ui.hpp"
-*/
+#include "dialog\ui.hpp"

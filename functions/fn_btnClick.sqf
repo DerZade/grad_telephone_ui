@@ -20,3 +20,9 @@ switch (toLower GRAD_Nokia3310_curPage) do {
           [_button, _display] call GRAD_Nokia3310_fnc_btnClick_alarm;
      };
 };
+
+if (!isMultiplayer) then {
+     diag_log format ["........................................"];
+     diag_log format ["grad_nokia3310: btn click %1", _button];
+     diag_log format ["........................................"];
+};
